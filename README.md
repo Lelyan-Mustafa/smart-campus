@@ -1,33 +1,33 @@
 
 # Smart Campus
 
-Smart Campus is a mobile application developed as a graduation project to simplify university attendance and improve access to campus services. The application provides dedicated experiences for students and instructors, making attendance management and lecture session tracking more organized and accessible.
+Smart Campus is a mobile application designed to simplify university attendance management and improve access to campus services. It provides student and instructor interfaces for managing lecture sessions, recording attendance, and reviewing attendance history.
 
-## Project Overview
+## Overview
 
-The application supports live and scheduled lecture sessions, allowing instructors to manage attendance while students discover and join available sessions.
+The application supports live and scheduled lecture sessions. Instructors can create and manage sessions, while students can discover available sessions and check in using a session PIN.
 
-The project was developed using a mobile application architecture with a backend API and Firebase integration.
+The project includes a mobile application, a backend API, and Firebase integration.
 
-## Key Features
+## Features
 
-### Student Features
-- Create an account and sign in.
-- Browse and discover available lecture sessions.
-- Find sessions through nearby location discovery or a session key.
-- Join live attendance sessions using a session PIN.
-- View attendance history.
-- Manage profile information.
+### Student
+- Student registration and login
+- Browse available lecture sessions
+- Discover sessions using nearby search or a session key
+- Join attendance sessions using a PIN
+- View attendance history
+- Manage profile information
 
-### Instructor Features
-- Create live or scheduled lecture sessions.
-- Configure session duration and recurring days.
-- Set session discovery options, including nearby discovery and search keys.
-- Monitor live attendance and student check-ins.
-- View lecture history and attendance details.
-- Export attendance reports in CSV format.
+### Instructor
+- Create live and scheduled lecture sessions
+- Configure session duration and recurring days
+- Set session discovery options
+- Monitor live attendance and student check-ins
+- View session history and attendance details
+- Export attendance reports as CSV files
 
-## Technologies Used
+## Technologies
 
 ### Mobile Application
 - React Native
@@ -36,18 +36,19 @@ The project was developed using a mobile application architecture with a backend
 - Expo Router
 - NativeWind
 
-### Backend
+### Backend API
 - Node.js
 - Express.js
 - TypeScript
-- RESTful API
+- RESTful APIs
 
-### Database & Authentication
+### Firebase
 - Firebase Authentication
 - Cloud Firestore
 - Firebase Admin SDK
 
-### Tools
+### Additional Tools & Libraries
+- Zod for validation
 - Git
 - Postman
 
@@ -56,50 +57,52 @@ The project was developed using a mobile application architecture with a backend
 ```text
 smart-campus/
 ├── apps/
-│   ├── mobile/       # Mobile application
-│   └── api/          # Backend API
+│   ├── mobile/       # React Native mobile app
+│   └── api/          # Express backend API
 ├── packages/
 │   ├── types/        # Shared TypeScript types
 │   └── validation/   # Shared validation schemas
 ├── docs/              # Project documentation
-└── package.json       # Workspace configuration
+├── package.json
+└── turbo.json
 ```
 
-## Getting Started
+## Application Screens
 
-### Prerequisites
+The mobile application includes screens and flows for:
+
+- Login and registration
+- Student home and attendance history
+- Instructor dashboard and history
+- Available sessions
+- Session information
+- Create lecture
+- Live attendance
+- User profiles
+
+## Development Setup
+
+### Requirements
 - Node.js
 - npm
 - Firebase project configuration
 
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Lelyan-Mustafa/smart-campus.git
-cd smart-campus
-```
-
-Install dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Configure the required environment variables for the mobile application and backend using the provided `.env.example` files.
-
-Start the development environment:
+### Start the development environment
 
 ```bash
 npm run dev
 ```
 
-Additional Firebase configuration and permissions are required for the application to work correctly.
+The project uses npm workspaces and Turborepo to manage the mobile application, backend API, and shared packages.
 
-## Graduation Project
+Firebase configuration and required environment variables must be set up before running the application.
 
-This project was developed as a team graduation project as part of the Software Engineering program.
+## Project Purpose
 
-It demonstrates the application of mobile development, backend integration, database management, authentication, and software development practices in a university attendance management solution.
-
+Smart Campus provides a digital solution for organizing university lecture attendance and session management, helping students and instructors access attendance-related services through a mobile application.
